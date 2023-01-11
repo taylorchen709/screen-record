@@ -1,0 +1,37 @@
+{
+    "name": "屏幕录制",
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "description": "屏幕录制",
+    "icons": {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    // "action": {
+    //     "default_title": "屏幕录制",
+    //     "default_icon": {
+    //         "16": "img/icon.png"
+    //     },
+    //     "default_popup": "popup.html"
+    // },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        // {
+        //     "matches": ["http://*/*","https://*/*"],
+        //     "js": ["inject.js"],
+        //     "run_at": "document_end"//document_start
+        // }
+    ],
+    "host_permissions": ["http://*/*", "https://*/*"],
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "notifications",
+        "webRequest",
+        "storage",
+        "scripting"
+    ]
+}
